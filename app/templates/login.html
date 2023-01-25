@@ -12,9 +12,9 @@
     <div class="container">
       <h2>User Login</h2>
       <form action="{{ url_for('login') }}" method="post">
-        {% if mesage is defined and mesage %}
-        <div class="alert alert-warning">{{ mesage }}</div>
-        {% endif %}
+        {% for message in get_flashed_messages() %}
+        <div class="flash-message">{{ message }}</div>
+        {% endfor %}
         <div class="form-group">
           <label for="email">Email:</label>
           <input
@@ -44,5 +44,14 @@
         </p>
       </form>
     </div>
+
+    <script>
+        window.onload = function() {
+            var flashMessage = document.getElementById("flash-message");
+            setTimeout(function(){
+                flashMessage.remove();
+            }, 3000);
+        }
+    </script>
   </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Task</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Edit Task</h1>
+
+      <form method="post">
+        {{ form.hidden_tag() }}
+        <table>
+          <tr>
+            <td>{{ form.title.label }}</td>
+            <td>{{ form.title }}</td>
+          </tr>
+          <tr>
+            <td>{{ form.date.label }}</td>
+            <td>{{ form.date }}</td>
+          </tr>
+          <tr>
+            <td>{{ form.priority.label }}</td>
+            <td>{{ form.priority }}</td>
+          </tr>
+        </table>
+        <input type="submit" value="Edit Task" />
+      </form>
+    </div>
+  </body>
+</html>

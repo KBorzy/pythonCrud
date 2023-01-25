@@ -12,9 +12,10 @@
     <div class="container">
       <h2>User Registration</h2>
       <form action="{{ url_for('register') }}" method="post">
-        {% if mesage is defined and mesage %}
-        <div class="alert alert-warning">{{ mesage }}</div>
-        {% endif %}
+        {% for message in get_flashed_messages() %}
+        <div class="flash-message">{{ message }}</div>
+        {% endfor %}
+
         <div class="form-group">
           <label for="name">Name:</label>
           <input
@@ -23,7 +24,6 @@
             id="name"
             name="name"
             placeholder="Enter name"
-            name="name"
           />
         </div>
         <div class="form-group">
@@ -34,7 +34,6 @@
             id="email"
             name="email"
             placeholder="Enter email"
-            name="email"
           />
         </div>
         <div class="form-group">
@@ -45,7 +44,6 @@
             id="password"
             name="password"
             placeholder="Enter password"
-            name="pswd"
           />
         </div>
         <button type="submit" class="btn btn-primary">Register</button>
@@ -55,5 +53,14 @@
         </p>
       </form>
     </div>
+
+    <script>
+      window.onload = function () {
+        var flashMessage = document.getElementById("flash-message");
+        setTimeout(function () {
+          flashMessage.remove();
+        }, 3000);
+      };
+    </script>
   </body>
 </html>

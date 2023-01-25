@@ -1,0 +1,15 @@
+:root {
+    --font-family-sans-serif: Open Sans, sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+.completed {
+    background-color: lightgreen;
+}
+.not-completed {
+    background-color: lightgray;
+}
+
+.body {
+    background-color: rgb(230, 147, 40);
+    font-family: Open Sans, sans-serif;
+}
