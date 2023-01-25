@@ -8,10 +8,10 @@
 
 # app.secret_key = 'xyzsdfg'
 
-# app.config['MYSQL_HOST'] = 'mysql-kborzy.alwaysdata.net'
-# app.config['MYSQL_USER'] = 'kborzy'
-# app.config['MYSQL_PASSWORD'] = 'Myflaskapp'
-# app.config['MYSQL_DB'] = 'kborzy_db'
+# app.config['MYSQL_HOST'] = 'host'
+# app.config['MYSQL_USER'] = 'user'
+# app.config['MYSQL_PASSWORD'] = 'password'
+# app.config['MYSQL_DB'] = 'name_db'
 
 # mysql = MySQL(app)
 
